@@ -1,0 +1,27 @@
+swagger: "2.0"
+info:
+  title: Base template application
+  description: Api docs
+  version: "1.0.0"
+parameters:
+  token:
+    - in: header
+      name: Authorization
+      required: true
+      type: string
+      description: Access token
+paths:
+
+##################################
+############# HEALTH #############
+##################################
+
+  /api/health:
+    $ref: ./health/health.yaml#/health
+
+##################################
+############# HOME ###############
+##################################
+
+  /:
+    $ref: ./home/home.yaml#/home
